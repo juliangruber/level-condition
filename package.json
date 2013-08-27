@@ -1,6 +1,6 @@
 {
   "name": "level-condition",
-  "description": "Get notified when a condition is triggered",
+  "description": "Get notified when a condition is triggered inside a LevelDB",
   "version": "0.0.1",
   "repository": {
     "type": "git",
