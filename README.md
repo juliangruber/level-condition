@@ -3,6 +3,8 @@
 
 Get notified when a condition is triggered inside a LevelDB.
 
+[![build status](https://secure.travis-ci.org/juliangruber/level-condition.png)](http://travis-ci.org/juliangruber/level-condition)
+
 ## Example
 
 Get notified when key `a` has value `"foo"` and key `b` has value `"bar"`.
