@@ -52,6 +52,8 @@ truthyness.
 Register a success function that gets called with all values when
 the check was successful.
 
+If you don't pass callback, a thunk/continuable is returned.
+
 ## Installation
 
 With [npm](https://npmjs.org) do:

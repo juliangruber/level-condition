@@ -65,6 +65,13 @@ Condition.prototype.check = function(fn) {
  */
 
 Condition.prototype.success = function(fn) {
+  if (!fn) {
+    var self = this;
+    return function(done) {
+      self.success(done);
+    }
+  }
+
   var values = [];
   var streams = [];
   var db = this.db;
