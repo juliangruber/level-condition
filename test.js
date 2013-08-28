@@ -1,7 +1,10 @@
 var test = require('tape');
 var Condition = require('./');
-var level = require('level');
-var db = level(__dirname + '/db');
+var levelup = require('levelup');
+var leveldown = require('leveldown');
+var db = levelup(__dirname + '/db', { db: function(l) {
+  return new leveldown(l);
+}});
 
 test('condition', function(t) {
   t.plan(6);
