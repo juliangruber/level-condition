@@ -68,7 +68,11 @@ Condition.prototype.success = function(fn) {
   if (!fn) {
     var self = this;
     return function(done) {
-      self.success(done);
+      self.success(function() {
+        var args = [].slice.call(arguments);
+        args.unshift(null);
+        done.apply(null, args);
+      });
     }
   }
 

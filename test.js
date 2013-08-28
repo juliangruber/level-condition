@@ -68,7 +68,7 @@ test('default check', function(t) {
 });
 
 test('thunk', function(t) {
-  t.plan(6);
+  t.plan(7);
 
   db.del('a');
   db.del('b');
@@ -78,7 +78,8 @@ test('thunk', function(t) {
     .check(function(a, b) {
       return a == 'foo' && b == 'bar';
     })
-    .success()(function(a, b) {
+    .success()(function(err, a, b) {
+      t.error(err);
       t.equal(a, 'foo');
       t.equal(b, 'bar');
 
