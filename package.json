@@ -15,9 +15,9 @@
     "level-live-stream": "~1.4.7"
   },
   "devDependencies": {
-    "tape": "~1.0.4",
-    "levelup": "~0.14.0",
-    "leveldown": "~0.8.0"
+    "tape": "~4.6.2",
+    "levelup": "~1.3.3",
+    "leveldown": "~1.5.0"
   },
   "keywords": [
     "level",
